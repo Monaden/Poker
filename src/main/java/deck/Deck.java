@@ -23,4 +23,11 @@ public class Deck implements IDeck {
             deck.add(new Card(suit, rank));
         }
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder stringBuilder = new StringBuilder();
+        deck.forEach(card -> stringBuilder.append(card.toString()+"\n"));
+        return stringBuilder.toString();
+    }
 }
