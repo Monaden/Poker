@@ -3,6 +3,7 @@ package deck;
 import gametypes.NLimitHoldem.interfaces.IDeck;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -22,5 +23,17 @@ public class Deck implements IDeck {
         for (Rank rank : Rank.values()) {
             deck.add(new Card(suit, rank));
         }
+    }
+
+    public void shuffle() {
+        Collections.shuffle(deck);
+    }
+
+    public Card popTop() {
+        return deck.remove(deck.size()-1);
+    }
+
+    public int cardsLeft() {
+        return deck.size();
     }
 }
