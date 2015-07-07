@@ -25,6 +25,13 @@ public class Deck implements IDeck {
         }
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder stringBuilder = new StringBuilder();
+        deck.forEach(card -> stringBuilder.append(card.toString() + "\n"));
+        return stringBuilder.toString();
+    }
+
     public void shuffle() {
         Collections.shuffle(deck);
     }
