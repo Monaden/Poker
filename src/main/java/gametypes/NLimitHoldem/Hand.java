@@ -26,7 +26,7 @@ public class Hand implements IHand{
         Card result = null;
         for(int i = 0; i < cards.length; i++) {
             if (cards[i].equals(card)) {
-                result = cards[0];
+                result = cards[i];
                 shiftAllLeft();
             }
         }
