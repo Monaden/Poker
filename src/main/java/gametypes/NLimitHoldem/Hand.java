@@ -1,11 +1,12 @@
 package gametypes.NLimitHoldem;
 
 import deck.Card;
+import gametypes.NLimitHoldem.interfaces.IHand;
 
 /**
  * Created by oliv on 6/28/15.
  */
-public class Hand {
+public class Hand implements IHand{
 
     private final Card[] cards;
     private int handSize = 0;
